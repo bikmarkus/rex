@@ -1,0 +1,97 @@
+@import 'reset.css';
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+body {
+    background: #fff;
+}
+ul,li{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+body{
+    margin:0 auto;
+    width:80%;
+}
+nav ul{
+    display:flex;
+}
+nav ul li{
+    display:block;
+    margin-right:1em;
+}
+ul.items-list{
+    margin-top:1em;
+}
+ul li{
+    display:block;
+}
+.main-container form{
+    display:flex;
+    justify-content: space-between;
+}
+.main-container form input[name="title"]{
+    display: block;
+    width:100%;
+}
+.main-container form button[type="submit"]{
+    margin-left:0.5em;
+}
+.main-container .items-list form{
+    width:initial;
+}
+.main-container .items-list form button.delete[type="submit"]{
+    display:block;
+}
+.main-container .items-list li{
+    display: flex;
+    margin-bottom:1em;
+    border:solid 1px rgb(118, 118, 118);
+    padding:0.5em;
+}
+.main-container .items-list p{
+    display: inline-block;
+    width: 100%;
+}
+@media screen and (max-width:590px){
+    body{
+        padding:1em;
+        width:100%;
+    }
+    nav ul{
+        display:flex;
+        justify-content:space-between;
+    }
+    nav ul li{
+        margin:0;
+        padding:0;
+    }
+    .main-container form{
+        width:100%;
+        display: flex;
+        align-items: center;
+    }
+    .main-container form input{
+        display:block;
+    }
+    .main-container form input[name="title"]{
+        width:100%;
+    }
+    .main-container .items-list form button[type="submit"]{
+        display:inline-block;
+    }
+    .main-container form button[type="submit"]{
+        display:none;
+    }
+    .main-container .items-list li{
+        width: 100%;
+        display: flex;
+        margin-bottom:1em;
+        border:solid 1px rgb(118, 118, 118);
+        padding:0.25em 0.5em;
+    }
+    .main-container .items-list p{
+        display: inline-block;
+    }
+}
