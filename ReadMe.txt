@@ -37,3 +37,5 @@ use databasename;
 show tables;
 Очистить таблицу без удаления ее структуры:
 TRUNCATE TABLE tablename;
+Создать новую таблицу со структурой, аналогичной существующей таблице:
+CREATE TABLE newtablename LIKE oldtablename;
