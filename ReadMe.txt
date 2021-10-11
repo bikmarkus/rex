@@ -39,3 +39,5 @@ show tables;
 TRUNCATE TABLE tablename;
 Создать новую таблицу со структурой, аналогичной существующей таблице:
 CREATE TABLE newtablename LIKE oldtablename;
+Сделать дамп базы из консоли:
+mysqldump -u root -p mytodo > dumped.sql
