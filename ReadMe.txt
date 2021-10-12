@@ -41,3 +41,12 @@ TRUNCATE TABLE tablename;
 CREATE TABLE newtablename LIKE oldtablename;
 Сделать дамп базы из консоли:
 mysqldump -u root -p mytodo > dumped.sql
+Добавить поле к существующей таблице:
+ALTER TABLE projects ADD COLUMN description LONGTEXT AFTER title;
+Посмотреть структуру таблицы:
+describe tablename;
+Вывести содержимое таблицы:
+SELECT * FROM tablename;
+
+Шпаргалка по командам mysql:
+http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm

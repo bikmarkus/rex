@@ -37,6 +37,15 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
+    public function selectAllById($table,$id)
+    {
+        $statement = $this->pdo->prepare("select * from {$table} where id={$id}");
+
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+
     /**
      * Insert a record into a table.
      *

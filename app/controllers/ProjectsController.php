@@ -7,7 +7,7 @@ use App\Core\App;
 class ProjectsController
 {
     /**
-     * Show all users.
+     * Show all projects.
      */
     public function index()
     {
@@ -17,7 +17,7 @@ class ProjectsController
     }
 
     /**
-     * Store a new user in the database.
+     * Store a new project in the database.
      */
     public function store()
     {

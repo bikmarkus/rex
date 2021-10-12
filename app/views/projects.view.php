@@ -15,6 +15,10 @@
                 <p>
                     <?= $item->title; ?>
                 </p>
+                    <form method="POST" action="/project-card">
+                        <input value="<?= $item->id; ?>" type="hidden" name="card_id">
+                        <button type="submit" class="view">VIEW</button>
+                    </form>
                     <form method="POST" action="/projects-del">
                         <input value="<?= $item->id; ?>" type="hidden" name="delete">
                         <button type="submit" class="delete">DEL</button>

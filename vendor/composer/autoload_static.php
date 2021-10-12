@@ -13,6 +13,7 @@ class ComposerStaticInitbd96ec55100f844b8e3581fbca393ab3
     public static $classMap = array (
         'App\\Controllers\\InboxController' => __DIR__ . '/../..' . '/app/controllers/InboxController.php',
         'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
+        'App\\Controllers\\ProjectCardController' => __DIR__ . '/../..' . '/app/controllers/ProjectCardController.php',
         'App\\Controllers\\ProjectsController' => __DIR__ . '/../..' . '/app/controllers/ProjectsController.php',
         'App\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/controllers/UsersController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
@@ -23,7 +24,6 @@ class ComposerStaticInitbd96ec55100f844b8e3581fbca393ab3
         'ComposerAutoloaderInitbd96ec55100f844b8e3581fbca393ab3' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInitbd96ec55100f844b8e3581fbca393ab3' => __DIR__ . '/..' . '/composer/autoload_static.php',
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
