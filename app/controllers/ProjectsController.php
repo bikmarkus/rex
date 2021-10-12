@@ -22,7 +22,8 @@ class ProjectsController
     public function store()
     {
         App::get('database')->insert('projects', [
-            'title' => $_POST['title']
+            'title' => $_POST['title'],
+            'description' => $_POST['description'],
         ]);
 
         return redirect('projects');

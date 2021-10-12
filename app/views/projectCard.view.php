@@ -10,11 +10,6 @@
     <?= $card[0]->description; ?>
 </p>
 
-<?php /*
-        echo '<pre>';
-        var_dump($card[0]);
-        echo '</pre>';*/
-?>
 </div>
 
 <?php require('partials/footer.php'); ?>

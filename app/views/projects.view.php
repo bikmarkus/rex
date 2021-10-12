@@ -1,11 +1,12 @@
 <?php require('partials/head.php'); ?>
 
-<div class="main-container">
+<div class="main-container projects">
 
     <h1>Projects</h1>
 
     <form method="POST" action="/projects">
         <input name="title"></input>
+        <textarea name="description"></textarea>
         <button type="submit">Add</button>
     </form>
 
