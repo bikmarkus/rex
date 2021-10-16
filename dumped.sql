@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.6.43, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.6.47, for Win64 (x86_64)
 --
 -- Host: localhost    Database: mytodo
 -- ------------------------------------------------------
--- Server version	5.6.43
+-- Server version	5.6.47
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -39,6 +39,30 @@ LOCK TABLES `inbox` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `next`
+--
+
+DROP TABLE IF EXISTS `next`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `next` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `project_id` int(10) unsigned NOT NULL,
+  `title` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `next`
+--
+
+LOCK TABLES `next` WRITE;
+/*!40000 ALTER TABLE `next` DISABLE KEYS */;
+/*!40000 ALTER TABLE `next` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `projects`
 --
 
@@ -50,7 +74,7 @@ CREATE TABLE `projects` (
   `title` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
   `description` longtext COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +122,7 @@ CREATE TABLE `users` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -107,7 +131,6 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Test'),(2,'Joe'),(3,'FadeAvway'),(4,'ddfsdsfds'),(5,'ddfsdsfds1'),(6,'ddfsdsfds8888'),(7,'ddfsdsfds447'),(8,'ddfsdsfds144'),(9,'ddfsdsfds2314'),(10,'ddfsdsfds2314'),(11,'ddfsdsfds2314'),(12,'ddfsdsfds8888'),(13,'ddfsdsfds8888'),(14,'ddfsdsfds8888'),(15,'ddfsdsfds8888'),(16,'ddfsdsfds8888'),(17,'ddfsdsfds8888'),(18,'ddfsdsfds8888'),(19,'ddfsdsfds1'),(20,'ddfsdsfds1'),(21,'ddfsdsfds447'),(22,'ddfsdsfds447'),(23,'ddfsdsfds447'),(24,'ddfsdsfds447'),(25,'ddfsdsfds8888'),(26,'ddfsdsfds1'),(27,'ddfsdsfds980'),(28,'ddfsdsfds44787'),(29,'ddfsdsfds999');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -120,4 +143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-12 19:25:58
+-- Dump completed on 2021-10-16 22:53:39

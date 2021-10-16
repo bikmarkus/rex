@@ -46,6 +46,15 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
+    public function selectAllNextByProjectId($table,$project_id)
+    {
+        $statement = $this->pdo->prepare("select * from {$table} where project_id={$project_id}");
+
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+
     /**
      * Insert a record into a table.
      *

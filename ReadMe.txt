@@ -43,10 +43,14 @@ CREATE TABLE newtablename LIKE oldtablename;
 mysqldump -u root -p mytodo > dumped.sql
 Добавить поле к существующей таблице:
 ALTER TABLE projects ADD COLUMN description LONGTEXT AFTER title;
+Изменить параметры поля в существующей таблице:
+ALTER TABLE next MODIFY project_id INT UNSIGNED NOT NULL;
 Посмотреть структуру таблицы:
 describe tablename;
 Вывести содержимое таблицы:
 SELECT * FROM tablename;
+Вставить данные в таблицу :
+INSERT INTO tablename(COLUMN_1, COLUMN_2,..) VALUES (VALUE_1,VALUE_2,..);
 
 Шпаргалка по командам mysql:
 http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm
