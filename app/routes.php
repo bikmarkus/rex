@@ -18,5 +18,6 @@ $router->post('project-card', 'ProjectCardController@index');
 $router->get('project-card', 'ProjectCardController@index');
 $router->post('next-add', 'ProjectCardController@storeNext');
 $router->post('next-del', 'ProjectCardController@deleteNext');
+$router->post('project-card-edit', 'ProjectCardController@edit');
 
 ?>

@@ -44,6 +44,14 @@ class ProjectCardController
         $_SESSION['project_id'] = $_POST['project_id'];
         return redirect('project-card');
     }
-    
+    public function edit()
+    {
+        $card_id = $_POST['card_id'];
+        $card = App::get('database')->selectAllById('projects',$card_id);
+        $card_next = App::get('database')->selectAllNextByProjectId("next",$card_id);
+        array_push($card, $card_next);
+        return view('projectCardEdit', compact('card'));
+        //dd($card);
+    }
 }
 ?>

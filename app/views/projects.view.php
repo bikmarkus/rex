@@ -20,7 +20,7 @@
                         <input value="<?= $item->id; ?>" type="hidden" name="card_id">
                         <button type="submit" class="view">VIEW</button>
                     </form>
-                    <form method="POST" action="/projects-edit">
+                    <form method="POST" action="/project-card-edit">
                         <input value="<?= $item->id; ?>" type="hidden" name="card_id">
                         <button type="submit" class="edit">EDIT</button>
                     </form>
