@@ -1,14 +1,15 @@
 <?php require('partials/head.php'); ?>
 
-<div class="main-container">
+<div class="main-container projects">
 
-    <h1>
-        <?= $card[0]->title; ?>
-    </h1>
-
-    <p class="project-description">
-        <?= $card[0]->description; ?>
-    </p>
+    <form method="POST" action="/project-card-save">
+        <h1>
+            <input name="title" value="<?= $card[0]->title;?>"></input>
+        </h1>
+        <textarea name="description"> <?= $card[0]->description; ?></textarea>
+        <input type="hidden" name="project_id" value="<?=$card[0]->id; ?>">
+        <button type="submit">Save</button>
+    </form>
 
     <form method="POST" action="/next-add">
         <input name="title" placeholder="next single action..."></input>

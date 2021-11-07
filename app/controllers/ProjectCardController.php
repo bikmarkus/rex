@@ -53,5 +53,15 @@ class ProjectCardController
         return view('projectCardEdit', compact('card'));
         //dd($card);
     }
+    public function save()
+    {
+        App::get('database')->insert('projects', [
+            'id' => $_POST['project_id'],
+            'title' => $_POST['title'],
+            'description' => $_POST['description'],
+        ]);
+
+        return redirect('projects');
+    }
 }
 ?>
